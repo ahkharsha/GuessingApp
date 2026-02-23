@@ -13,6 +13,11 @@ A console-based interactive number guessing game built to practice core Java pro
 * Implements a standalone `GuessValidator` class to provide "HIGH", "LOW", or "CORRECT" feedback.
 * Tracks attempts and ends the game flow if the user guesses correctly or runs out of tries.
 
+### UC3: Hint Generation
+* Adds progressive hints (like even/odd and ranges) using a dedicated `HintService` class.
+* Triggers hints automatically after incorrect guesses without revealing the exact number.
+* Caps the total number of hints provided to maintain difficulty.
+
 ## Tech Stack
 * Java
 

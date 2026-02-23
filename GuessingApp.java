@@ -1,20 +1,20 @@
 import java.util.Scanner;
 
 /**
- * GuessingApp UC2 – User Guess Submission
- * This main class coordinates the game execution, taking user input and validating it.
+ * GuessingApp UC3 – Hint Generation
+ * This main class coordinates the game execution and introduces progressive hints.
  * @author Developer
- * @version 2.0
+ * @version 3.0
  */
 public class GuessingApp {
     
     public static void main(String[] args) {
-        // Initialize the game configuration
         GameConfig config = new GameConfig();
         config.showRules();
         
         Scanner scanner = new Scanner(System.in);
         int attempts = 0;
+        int hintsUsed = 0;
         
         // Game loop runs until the player exhausts the maximum attempts
         while (attempts < config.getMaxAttempts()) {
@@ -22,8 +22,14 @@ public class GuessingApp {
             int guess = scanner.nextInt();
             attempts++;
             
-            // Validate guess using the static utility method
             String result = GuessValidator.validateGuess(guess, config.getTargetNumber());
+            
+            // A hint is generated only after an incorrect guess and within the allowed hint limit
+            if (!"CORRECT".equals(result) && hintsUsed < config.getMaxHints()) {
+                hintsUsed++;
+                System.out.println(HintService.generateHint(config.getTargetNumber(), hintsUsed));
+            }
+            
             System.out.println(result);
             
             // Stop the loop immediately if the correct number is guessed
