@@ -18,6 +18,10 @@ A console-based interactive number guessing game built to practice core Java pro
 * Triggers hints automatically after incorrect guesses without revealing the exact number.
 * Caps the total number of hints provided to maintain difficulty.
 
+### UC4: Error Handling & Validation
+* Introduces a custom `InvalidInputException` to manage errors cleanly.
+* Centralizes all input checks in a `ValidationService` to ensure inputs are strictly numeric and within the 1-100 range before processing.
+
 ## Tech Stack
 * Java
 

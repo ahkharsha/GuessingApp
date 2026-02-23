@@ -1,14 +1,16 @@
 import java.util.Scanner;
 
 /**
- * GuessingApp UC3 – Hint Generation
- * This main class coordinates the game execution and introduces progressive hints.
+ * GuessingApp UC4 – Error Handling & Validation
+ * This main class coordinates the game execution while ensuring user inputs are validated.
  * @author Developer
- * @version 3.0
+ * @version 4.0
  */
 public class GuessingApp {
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InvalidInputException {
+        System.out.println("Welcome to the Guessing App");
+        
         GameConfig config = new GameConfig();
         config.showRules();
         
@@ -19,7 +21,10 @@ public class GuessingApp {
         // Game loop runs until the player exhausts the maximum attempts
         while (attempts < config.getMaxAttempts()) {
             System.out.print("Enter your guess: ");
-            int guess = scanner.nextInt();
+            
+            // User input is captured as a string and validated before being used in the game logic
+            String input = scanner.nextLine();
+            int guess = ValidationService.validateInput(input);
             attempts++;
             
             String result = GuessValidator.validateGuess(guess, config.getTargetNumber());
