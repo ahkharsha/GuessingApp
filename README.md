@@ -26,6 +26,10 @@ A console-based interactive number guessing game built to practice core Java pro
 * Captures the player's name at the start of the session.
 * Uses a `StorageService` to persist the player's name, total attempts, and win/loss status to a `game_results.txt` file upon completion.
 
+### UC6: Game Restart & Exit
+* Wraps the main execution in an outer `do-while` loop for replayability.
+* Introduces a `GameController` to prompt the user to safely exit or restart the game with a fresh target number.
+
 ## Tech Stack
 * Java
 
