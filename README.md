@@ -8,6 +8,11 @@ A console-based interactive number guessing game built to practice core Java pro
 * Initializes the game environment with a randomized target number (1-100) using a dedicated `GameConfig` class.
 * Displays formatted game rules and instructions to the player upon startup.
 
+### UC2: User Guess Submission
+* Accepts and processes user input via the console using a game loop.
+* Implements a standalone `GuessValidator` class to provide "HIGH", "LOW", or "CORRECT" feedback.
+* Tracks attempts and ends the game flow if the user guesses correctly or runs out of tries.
+
 ## Tech Stack
 * Java
 
