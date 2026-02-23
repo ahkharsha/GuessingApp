@@ -19,3 +19,6 @@ bin/
 # OS generated files
 .DS_Store
 Thumbs.db
+
+# Game Results File
+game_results.txt

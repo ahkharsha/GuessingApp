@@ -22,6 +22,10 @@ A console-based interactive number guessing game built to practice core Java pro
 * Introduces a custom `InvalidInputException` to manage errors cleanly.
 * Centralizes all input checks in a `ValidationService` to ensure inputs are strictly numeric and within the 1-100 range before processing.
 
+### UC5: Game Result Storage
+* Captures the player's name at the start of the session.
+* Uses a `StorageService` to persist the player's name, total attempts, and win/loss status to a `game_results.txt` file upon completion.
+
 ## Tech Stack
 * Java
 
