@@ -1,14 +1,12 @@
 # Number Guessing Game
 
-An interactive console-based game where players test their luck and logic by trying to guess a randomly generated number within a specific range. 
+A console-based interactive number guessing game built to practice core Java programming concepts like encapsulation, constructors, control flow, and more.
 
-## Features
-* Randomized target number generation for unique gameplay each round
-* Interactive higher/lower feedback system
-* Dynamic hints (e.g., even/odd, divisibility) to assist the player
-* Strict input validation to prevent unexpected crashes
-* Persistent game history and score tracking
-* Graceful exit and replayability options
+## Features Implemented
+
+### UC1: Game Initialization
+* Initializes the game environment with a randomized target number (1-100) using a dedicated `GameConfig` class.
+* Displays formatted game rules and instructions to the player upon startup.
 
 ## Tech Stack
 * Java
@@ -16,13 +14,12 @@ An interactive console-based game where players test their luck and logic by try
 ## How to Run
 1. Open your terminal or command prompt.
 2. Navigate to the project folder.
-3. Compile the application:
+3. Compile all Java files:
 ```bash
-javac GuessingApp.java
-
+javac *.java
 ```
 
-4. Run the game:
+4. Run the application:
 ```bash
 java GuessingApp
 ```
